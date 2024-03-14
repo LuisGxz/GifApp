@@ -1,0 +1,17 @@
+<div aria-live="polite" aria-atomic="true" class="position-fixed top-0 end-0 p-3" style="z-index: 5">
+    <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Copied!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="successToastMessage"></div>
+    </div>
+</div>
+
+<div class="card text-center mb-2 bg-dark">
+    <shared-lazy-image [url]="gif.images.downsized_medium.url" [title]="gif.title"></shared-lazy-image>
+    <div class="card-body text-white">
+        <p class="card-title">{{gif.title}}</p>
+        <button class="btn btn-primary btn-gif" (click)="copyLinkToClipboard()">Copy link!</button>
+    </div>
+</div>
